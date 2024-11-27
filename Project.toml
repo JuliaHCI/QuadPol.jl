@@ -1,0 +1,7 @@
+name = "QuadPol"
+uuid = "8fb4fc55-c324-4059-b5c4-a155b47617a4"
+authors = ["Miles Lucas <mdlucas@hawaii.edu> and contributors"]
+version = "0.1.0"
+
+[compat]
+julia = "1.11"
