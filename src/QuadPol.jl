@@ -254,14 +254,14 @@ end
 
 function calculate_statistics(quadpols::QuadrantsWithErrors)
     # Quadrant sums
-    Q000 = sum(quadpols.Q000) ± sqrt(sum(quadpols.Q000_err .^2))
-    Q090 = sum(quadpols.Q090) ± sqrt(sum(quadpols.Q090_err .^2))
-    Q180 = sum(quadpols.Q180) ± sqrt(sum(quadpols.Q180_err .^2))
-    Q270 = sum(quadpols.Q270) ± sqrt(sum(quadpols.Q270_err .^2))
-    U045 = sum(quadpols.U045) ± sqrt(sum(quadpols.U045_err .^2))
-    U135 = sum(quadpols.U135) ± sqrt(sum(quadpols.U135_err .^2))
-    U225 = sum(quadpols.U225) ± sqrt(sum(quadpols.U225_err .^2))
-    U315 = sum(quadpols.U315) ± sqrt(sum(quadpols.U315_err .^2))
+    Q000 = sum(quadpols.Q000) ± sqrt(sum(quadpols.Q000_err.^2))
+    Q090 = sum(quadpols.Q090) ± sqrt(sum(quadpols.Q090_err.^2))
+    Q180 = sum(quadpols.Q180) ± sqrt(sum(quadpols.Q180_err.^2))
+    Q270 = sum(quadpols.Q270) ± sqrt(sum(quadpols.Q270_err.^2))
+    U045 = sum(quadpols.U045) ± sqrt(sum(quadpols.U045_err.^2))
+    U135 = sum(quadpols.U135) ± sqrt(sum(quadpols.U135_err.^2))
+    U225 = sum(quadpols.U225) ± sqrt(sum(quadpols.U225_err.^2))
+    U315 = sum(quadpols.U315) ± sqrt(sum(quadpols.U315_err.^2))
 
     Q_quads = (Q000, Q090, Q180, Q270)
     U_quads = (U045, U135, U225, U315)
@@ -270,8 +270,8 @@ function calculate_statistics(quadpols::QuadrantsWithErrors)
     Qd_abs = sum(abs, Q_quads)
     Ud_abs = sum(abs, U_quads)
 
-    Qphi = sum(quadpols.Qphi) ± sqrt(sum(quadpols.Qphi_err .^2))
-    Uphi = sum(quadpols.Uphi) ± sqrt(sum(quadpols.Uphi_err .^2))
+    Qphi = sum(quadpols.Qphi) ± sqrt(sum(quadpols.Qphi_err.^2))
+    Uphi = sum(quadpols.Uphi) ± sqrt(sum(quadpols.Uphi_err.^2))
     
     left_right_Qsum = abs(Q090) + abs(Q270)
     left_right_Utop = abs(U045) + abs(U315)
