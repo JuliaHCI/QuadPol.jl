@@ -4,7 +4,7 @@ CurrentModule = QuadPol
 
 # QuadPol
 
-Documentation for [QuadPol](https://github.com/mileslucas/QuadPol.jl).
+Documentation for [QuadPol](https://github.com/JuliaHCI/QuadPol.jl).
 
 ```@index
 ```
