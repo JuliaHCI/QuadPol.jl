@@ -2,5 +2,5 @@ using QuadPol
 using Test
 
 @testset "QuadPol.jl" begin
-    # Write your tests here.
+    include("test_HR4796.jl")
 end
