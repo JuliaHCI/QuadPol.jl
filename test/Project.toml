@@ -1,3 +1,4 @@
 [deps]
 AstroImages = "fe3fc30c-9b16-11e9-1c73-17dabf39f4ad"
+Photometry = "af68cb61-81ac-52ed-8703-edc140936be4"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
