@@ -64,29 +64,29 @@ function extract_quadrants(
 
     ## Step 3
     # integrate apertures for Q
-    mask = @. (disk_angles <= 45) | (disk_angles > 315)
+    mask = @. (disk_angles < 45) | (disk_angles >= 315)
     Q000 = mask .* Qrot
 
-    mask = @. 45 < disk_angles <= 135
+    mask = @. 45 <= disk_angles < 135
     Q090 = mask .* Qrot
 
-    mask = @. 135 < disk_angles <= 225
+    mask = @. 135 <= disk_angles < 225
     Q180 = mask .* Qrot
 
-    mask = @. 225 < disk_angles <= 315
+    mask = @. 225 <= disk_angles < 315
     Q270 = mask .* Qrot
 
     # integrate apertures for U
-    mask = @. 0 < disk_angles <= 90
+    mask = @. 0 <= disk_angles < 90
     U045 = mask .* Urot
 
-    mask = @. 90 < disk_angles <= 180
+    mask = @. 90 <= disk_angles < 180
     U135 = mask .* Urot
 
-    mask = @. 180 < disk_angles <= 270
+    mask = @. 180 <= disk_angles < 270
     U225 = mask .* Urot
 
-    mask = @. 270 < disk_angles <= 360
+    mask = @. 270 <= disk_angles < 360
     U315 = mask .* Urot
 
     return Quadrants(
@@ -132,36 +132,36 @@ function extract_quadrants(
 
     ## Step 3
     # integrate apertures for Q
-    mask = @. (disk_angles <= 45) | (disk_angles > 315)
+    mask = @. (disk_angles < 45) | (315 <= disk_angles)
     Q000 = mask .* Qrot
     Q000_err = mask .* Qrot_err
     
-    mask = @. 45 < disk_angles <= 135
+    mask = @. 45 <= disk_angles < 135
     Q090 = mask .* Qrot
     Q090_err = mask .* Qrot_err
 
-    mask = @. 135 < disk_angles <= 225
+    mask = @. 135 <= disk_angles < 225
     Q180 = mask .* Qrot
     Q180_err = mask .* Qrot_err
 
-    mask = @. 225 < disk_angles <= 315
+    mask = @. 225 <= disk_angles < 315
     Q270 = mask .* Qrot
     Q270_err = mask .* Qrot_err
 
     # integrate apertures for U
-    mask = @. 0 < disk_angles <= 90
+    mask = @. 0 <= disk_angles < 90
     U045 = mask .* Urot
     U045_err = mask .* Urot_err
 
-    mask = @. 90 < disk_angles <= 180
+    mask = @. 90 <= disk_angles < 180
     U135 = mask .* Urot
     U135_err = mask .* Urot_err
 
-    mask = @. 180 < disk_angles <= 270
+    mask = @. 180 <= disk_angles < 270
     U225 = mask .* Urot
     U225_err = mask .* Urot_err
 
-    mask = @. 270 < disk_angles <= 360
+    mask = @. 270 <= disk_angles < 360
     U315 = mask .* Urot
     U315_err = mask .* Urot_err
 
